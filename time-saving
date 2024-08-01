@@ -1,0 +1,102 @@
+@prefix : <urn:webprotege:ontology:6b560634-c0d1-4881-81b5-90380bd0a9b8#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:6b560634-c0d1-4881-81b5-90380bd0a9b8> .
+
+<urn:webprotege:ontology:6b560634-c0d1-4881-81b5-90380bd0a9b8> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R8iehBxBxkvW268Nd0kdmX6
+<http://webprotege.stanford.edu/R8iehBxBxkvW268Nd0kdmX6> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "hasDeadline (prompt)" .
+
+
+###  http://webprotege.stanford.edu/R9GEJ9U1xxXKWdr7hYGM2nQ
+<http://webprotege.stanford.edu/R9GEJ9U1xxXKWdr7hYGM2nQ> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "resultsIn" .
+
+
+###  http://webprotege.stanford.edu/R9SoKbxz0sld226yE2Mj0SG
+<http://webprotege.stanford.edu/R9SoKbxz0sld226yE2Mj0SG> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "inActivity" .
+
+
+###  http://webprotege.stanford.edu/RBPbhTkDNWIiA6hf54ObqGF
+<http://webprotege.stanford.edu/RBPbhTkDNWIiA6hf54ObqGF> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "planningError" .
+
+
+###  http://webprotege.stanford.edu/RDWn4qZTZyx6OfzVHatWmDe
+<http://webprotege.stanford.edu/RDWn4qZTZyx6OfzVHatWmDe> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "isAffectedBy" .
+
+
+###  http://webprotege.stanford.edu/RDwgJp8ExHkrqeXjVmOVOio
+<http://webprotege.stanford.edu/RDwgJp8ExHkrqeXjVmOVOio> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "isReflectedOn" .
+
+
+###  http://webprotege.stanford.edu/RSLDSbgQbAytP7qPC1i4cD
+<http://webprotege.stanford.edu/RSLDSbgQbAytP7qPC1i4cD> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "isEngagedIn" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R7RAv7VjxAvsjPcqiDjPvyf
+<http://webprotege.stanford.edu/R7RAv7VjxAvsjPcqiDjPvyf> rdf:type owl:Class ;
+                                                         rdfs:label "Outcome" .
+
+
+###  http://webprotege.stanford.edu/R86VZ3oUR5Y5atOxWD7dF6Z
+<http://webprotege.stanford.edu/R86VZ3oUR5Y5atOxWD7dF6Z> rdf:type owl:Class ;
+                                                         rdfs:label "Time-savingStrategy" .
+
+
+###  http://webprotege.stanford.edu/RCoBfGEnA2O1sqLVsKLRrn
+<http://webprotege.stanford.edu/RCoBfGEnA2O1sqLVsKLRrn> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/RSLDSbgQbAytP7qPC1i4cD> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/RxQngVTaivmiWmXJ2JsYsG>
+                                                                        ] ;
+                                                        rdfs:label "Person" .
+
+
+###  http://webprotege.stanford.edu/RZY8dJbuYbCsnQxzeYdJFS
+<http://webprotege.stanford.edu/RZY8dJbuYbCsnQxzeYdJFS> rdf:type owl:Class ;
+                                                        rdfs:label "Deadline" .
+
+
+###  http://webprotege.stanford.edu/RxQngVTaivmiWmXJ2JsYsG
+<http://webprotege.stanford.edu/RxQngVTaivmiWmXJ2JsYsG> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/R9GEJ9U1xxXKWdr7hYGM2nQ> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R7RAv7VjxAvsjPcqiDjPvyf>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/R9SoKbxz0sld226yE2Mj0SG> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/RZY8dJbuYbCsnQxzeYdJFS>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/RDWn4qZTZyx6OfzVHatWmDe> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R86VZ3oUR5Y5atOxWD7dF6Z>
+                                                                        ] ;
+                                                        rdfs:label "Activity" .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
