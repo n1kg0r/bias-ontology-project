@@ -1,0 +1,128 @@
+@prefix : <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
+
+<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/PeltzmanEffect.owl> rdf:type owl:Ontology ;
+                                                                               <http://purl.org/dc/terms/creator> "Nikolai Gorbachev, Olga Makarkina, Ulzhan Baizhankyzy" ;
+                                                                               <http://purl.org/dc/terms/description> "The Peltzman effect, named after economist Sam Peltzman, refers to the theory that people adjust their behavior in response to perceived changes in safety regulations or interventions, often in a way that counteracts the intended safety benefits. This concept is particularly associated with the field of public safety, such as in the context of traffic regulations or product safety standards." ;
+                                                                               rdf:title "Peltzman Effect"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#title
+rdf:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R7IQwPodAj6QwuIE1qRG0Xd
+<http://webprotege.stanford.edu/R7IQwPodAj6QwuIE1qRG0Xd> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
+                                                         rdfs:label "Affects"@en .
+
+
+###  http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT
+<http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                         rdfs:label "isEngagedIn"@en .
+
+
+###  http://webprotege.stanford.edu/RBOPs2vrzhCNb1o0TgVt972
+<http://webprotege.stanford.edu/RBOPs2vrzhCNb1o0TgVt972> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
+                                                         rdfs:label "resultsIn"@en .
+
+
+###  http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1
+<http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2> ;
+                                                        rdfs:label "inActivity"@en .
+
+
+###  http://webprotege.stanford.edu/RuG68oPUWzLyEFEqdJM0Eb
+<http://webprotege.stanford.edu/RuG68oPUWzLyEFEqdJM0Eb> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                        rdfs:label "isReflectedOn"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R8Q9Qj66jPQYcBJWyOyjDnI
+<http://webprotege.stanford.edu/R8Q9Qj66jPQYcBJWyOyjDnI> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
+                                                         rdfs:range rdfs:Literal ;
+                                                         rdfs:label "observedSafety"@en .
+
+
+###  http://webprotege.stanford.edu/RCPBWnkUeATXCYrmV4z8gW5
+<http://webprotege.stanford.edu/RCPBWnkUeATXCYrmV4z8gW5> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
+                                                         rdfs:range rdfs:Literal ;
+                                                         rdfs:label "expectedSafety"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG
+<http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> rdf:type owl:Class ;
+                                                         rdfs:label "ResultingBehavior" .
+
+
+###  http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5
+<http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> rdf:type owl:Class ;
+                                                         rdfs:label "SafetyRegulations"@en .
+
+
+###  http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg
+<http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> rdf:type owl:Class ;
+                                                         rdfs:label "RisksEvaluation"@en .
+
+
+###  http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY
+<http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> rdf:type owl:Class ;
+                                                         rdfs:label "PerceivedRisks"@en .
+
+
+###  http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2
+<http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2> rdf:type owl:Class ;
+                                                         rdfs:label "Activity"@en .
+
+
+###  http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu
+<http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> rdf:type owl:Class ;
+                                                        rdfs:label "Person"@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,111 @@
+@prefix : <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
+
+<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/PlanningFallacy.owl> rdf:type owl:Ontology ;
+                                                                                <http://purl.org/dc/terms/creator> "Nikolai Gorbachev, Olga Makarkina, Ulzhan Baizhankyzy" ;
+                                                                                <http://purl.org/dc/terms/description> "The planning fallacy is a phenomenon in which predictions about how much time will be needed to complete a future task display an optimism bias and underestimate the time needed. This phenomenon sometimes occurs regardless of the individual's knowledge that past tasks of a similar nature have taken longer to complete than generally planned.[1][2][3] The bias affects predictions only about one's own tasks. On the other hand, when outside observers predict task completion times, they tend to exhibit a pessimistic bias, overestimating the time needed.[4][5] The planning fallacy involves estimates of task completion times more optimistic than those encountered in similar projects in the past." ;
+                                                                                rdf:title "Planning Fallacy"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#title
+rdf:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT
+<http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                         rdfs:label "isEngagedIn"@en .
+
+
+###  http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1
+<http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2> ;
+                                                        rdfs:label "inActivity"@en .
+
+
+###  http://webprotege.stanford.edu/RuG68oPUWzLyEFEqdJM0Eb
+<http://webprotege.stanford.edu/RuG68oPUWzLyEFEqdJM0Eb> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                        rdfs:label "isReflectedOn"@en .
+
+
+###  urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#resultsIn
+:resultsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+           rdfs:range :SafetyBenefit ;
+           rdfs:label "resultsIn" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#isPositive
+:isPositive rdf:type owl:DatatypeProperty ;
+            rdfs:domain :SafetyBenefit ;
+            rdfs:range xsd:boolean ;
+            rdfs:label "isOptimistic" .
+
+
+###  urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#level
+:level rdf:type owl:DatatypeProperty ;
+       rdfs:domain :SafetyBenefit ;
+       rdfs:label "planningError" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg
+<http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> rdf:type owl:Class ;
+                                                         rdfs:label "TimePlanning"@en .
+
+
+###  http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY
+<http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> rdf:type owl:Class ;
+                                                         rdfs:label "TimingPerception"@en .
+
+
+###  http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2
+<http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2> rdf:type owl:Class ;
+                                                         rdfs:label "Task"@en .
+
+
+###  http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu
+<http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> rdf:type owl:Class ;
+                                                        rdfs:label "Person"@en .
+
+
+###  urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#SafetyBenefit
+:SafetyBenefit rdf:type owl:Class ;
+               rdfs:label "OptimisticProjection" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

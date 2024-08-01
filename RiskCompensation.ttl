@@ -6,10 +6,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
 
-<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/PeltzmanEffect.owl> rdf:type owl:Ontology ;
-                                                                               <http://purl.org/dc/terms/creator> "Nikolai Gorbachev, Olga Makarkina, Ulzhan Baizhankyzy" ;
-                                                                               <http://purl.org/dc/terms/description> "The Peltzman effect, named after economist Sam Peltzman, refers to the theory that people adjust their behavior in response to perceived changes in safety regulations or interventions, often in a way that counteracts the intended safety benefits. This concept is particularly associated with the field of public safety, such as in the context of traffic regulations or product safety standards." ;
-                                                                               rdf:title "Peltzman Effect"@en .
+<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl> rdf:type owl:Ontology ;
+                                                                                 <http://purl.org/dc/terms/creator> "Nikolai Gorbachev, Olga Makarkina, Ulzhan Baizhankyzy" ;
+                                                                                 <http://purl.org/dc/terms/description> "Risk compensation is a theory which suggests that people typically adjust their behavior in response to perceived levels of risk, becoming more careful where they sense greater risk and less careful if they feel more protected. Although usually small in comparison to the fundamental benefits of safety interventions, it may result in a lower net benefit than expected or even higher risks" ;
+                                                                                 rdf:title "Risk Compensation"@en .
 
 #################################################################
 #    Annotation properties
@@ -34,9 +34,9 @@ rdf:title rdf:type owl:AnnotationProperty .
 ###  http://webprotege.stanford.edu/R7IQwPodAj6QwuIE1qRG0Xd
 <http://webprotege.stanford.edu/R7IQwPodAj6QwuIE1qRG0Xd> rdf:type owl:ObjectProperty ;
                                                          rdfs:subPropertyOf owl:topObjectProperty ;
-                                                         rdfs:domain <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
-                                                         rdfs:range <http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> ;
-                                                         rdfs:label "isAffectedBy"@en .
+                                                         rdfs:domain <http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
+                                                         rdfs:label "Affects"@en .
 
 
 ###  http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT
@@ -52,7 +52,7 @@ rdf:title rdf:type owl:AnnotationProperty .
                                                          rdfs:subPropertyOf owl:topObjectProperty ;
                                                          rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
                                                          rdfs:range <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
-                                                         rdfs:label "resultsIn"@en .
+                                                         rdfs:label "leadsTo"@en .
 
 
 ###  http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1
@@ -71,24 +71,29 @@ rdf:title rdf:type owl:AnnotationProperty .
                                                         rdfs:label "isReflectedOn"@en .
 
 
+###  http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#resultsIn
+:resultsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
+           rdfs:range :SafetyBenefit ;
+           rdfs:label "resultsIn" .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://webprotege.stanford.edu/R8Q9Qj66jPQYcBJWyOyjDnI
-<http://webprotege.stanford.edu/R8Q9Qj66jPQYcBJWyOyjDnI> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                         rdfs:domain <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
-                                                         rdfs:range rdfs:Literal ;
-                                                         rdfs:label "observedSafety"@en .
+###  http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#isPositive
+:isPositive rdf:type owl:DatatypeProperty ;
+            rdfs:domain :SafetyBenefit ;
+            rdfs:range xsd:boolean ;
+            rdfs:label "isPositive" .
 
 
-###  http://webprotege.stanford.edu/RCPBWnkUeATXCYrmV4z8gW5
-<http://webprotege.stanford.edu/RCPBWnkUeATXCYrmV4z8gW5> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                         rdfs:domain <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> ;
-                                                         rdfs:range rdfs:Literal ;
-                                                         rdfs:label "expectedSafety"@en .
+###  http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#level
+:level rdf:type owl:DatatypeProperty ;
+       rdfs:domain :SafetyBenefit ;
+       rdfs:range xsd:unsignedShort ;
+       rdfs:label "levelOfBenefit" .
 
 
 #################################################################
@@ -97,12 +102,12 @@ rdf:title rdf:type owl:AnnotationProperty .
 
 ###  http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG
 <http://webprotege.stanford.edu/R78e64QdkZW8NYvrlsBWlGG> rdf:type owl:Class ;
-                                                         rdfs:label "ResultingBehavior" .
+                                                         rdfs:label "BehaviorChange" .
 
 
 ###  http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5
 <http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> rdf:type owl:Class ;
-                                                         rdfs:label "SafetyRegulations"@en .
+                                                         rdfs:label "SafetyMeasure"@en .
 
 
 ###  http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg
@@ -112,7 +117,7 @@ rdf:title rdf:type owl:AnnotationProperty .
 
 ###  http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY
 <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> rdf:type owl:Class ;
-                                                         rdfs:label "PerceivedRisks"@en .
+                                                         rdfs:label "RiskPerception"@en .
 
 
 ###  http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2
@@ -123,6 +128,11 @@ rdf:title rdf:type owl:AnnotationProperty .
 ###  http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu
 <http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> rdf:type owl:Class ;
                                                         rdfs:label "Person"@en .
+
+
+###  http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#SafetyBenefit
+:SafetyBenefit rdf:type owl:Class ;
+               rdfs:label "SafetyBenefit" .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

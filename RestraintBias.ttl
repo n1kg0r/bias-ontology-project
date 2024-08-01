@@ -1,0 +1,132 @@
+@prefix : <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#> .
+
+<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RestraintBias.owl> rdf:type owl:Ontology ;
+                                                                              <http://purl.org/dc/terms/creator> "Nikolai Gorbachev, Olga Makarkina, Ulzhan Baizhankyzy" ;
+                                                                              <http://purl.org/dc/terms/description> "Restraint bias is the tendency for people to overestimate their ability to control impulsive behavior. An inflated self-control belief may lead to greater exposure to temptation, and increased impulsiveness. Therefore, the restraint bias has bearing on addiction. For example, someone might use drugs, simply because they believe they can resist any potential addiction. An individual's inability to control, or their temptation can come from several different visceral impulses. Visceral impulses can include hunger, sexual arousal, and fatigue. These impulses provide information about the current state and behavior needed to keep the body satisfied" ;
+                                                                              rdf:title "Restraint Bias"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#title
+rdf:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R7IQwPodAj6QwuIE1qRG0Xd
+<http://webprotege.stanford.edu/R7IQwPodAj6QwuIE1qRG0Xd> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
+                                                         rdfs:label "Affects"@en .
+
+
+###  http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT
+<http://webprotege.stanford.edu/R9tAM1mX7cZmEBVkTebq8eT> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                         rdfs:label "isEngagedIn"@en .
+
+
+###  http://webprotege.stanford.edu/RBOPs2vrzhCNb1o0TgVt972
+<http://webprotege.stanford.edu/RBOPs2vrzhCNb1o0TgVt972> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                         rdfs:range :SafetyBenefit ;
+                                                         rdfs:label "leadsTo"@en .
+
+
+###  http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1
+<http://webprotege.stanford.edu/RFen0Nt7fAarl1GirsMzi1> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2> ;
+                                                        rdfs:label "inActivity"@en .
+
+
+###  http://webprotege.stanford.edu/RuG68oPUWzLyEFEqdJM0Eb
+<http://webprotege.stanford.edu/RuG68oPUWzLyEFEqdJM0Eb> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> ;
+                                                        rdfs:label "isReflectedOn"@en .
+
+
+###  urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#resultsIn
+:resultsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :SafetyBenefit ;
+           rdfs:range <http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#Consequense> ;
+           rdfs:label "resultsIn" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#isAddiction
+<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#isAddiction> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:domain <http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#Consequense> ;
+                                                                                            rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5
+<http://webprotege.stanford.edu/R7ZMXJbIu2ViAerAlsTB5x5> rdf:type owl:Class ;
+                                                         rdfs:label "VisceralImpulse"@en .
+
+
+###  http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg
+<http://webprotege.stanford.edu/R87QceznYMb2fYGeKlOiQWg> rdf:type owl:Class ;
+                                                         rdfs:comment "https://w3id.org/framester/data/framestercore/Estimating" ;
+                                                         rdfs:label "DecisionMaking"@en .
+
+
+###  http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY
+<http://webprotege.stanford.edu/R8xyvilPijacwug4NuQx5rY> rdf:type owl:Class ;
+                                                         rdfs:comment "https://w3id.org/framester/data/framestercore/EstimatedValue" ;
+                                                         rdfs:label "ControlEstimate"@en .
+
+
+###  http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2
+<http://webprotege.stanford.edu/RCCuhJo1pifRCQY5QWqMaO2> rdf:type owl:Class ;
+                                                         rdfs:label "Activity"@en .
+
+
+###  http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu
+<http://webprotege.stanford.edu/RwMszb8aXA9fPtYoCTu1vu> rdf:type owl:Class ;
+                                                        rdfs:label "Person"@en .
+
+
+###  http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#Consequense
+<http://www.nikolai-olga-ulzhan.com/CognitiveBiasOntology/RiskCompensation.owl#Consequense> rdf:type owl:Class ;
+                                                                                            rdfs:label "Consequence" .
+
+
+###  urn:webprotege:ontology:b7277b8b-ead9-4a3d-ad2e-99471a89a271#SafetyBenefit
+:SafetyBenefit rdf:type owl:Class ;
+               rdfs:label "ResultingBehavior" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
