@@ -1,0 +1,108 @@
+@prefix : <urn:webprotege:ontology:3edd7acc-d7d5-4844-bd1b-3c00fb67bbc6#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:3edd7acc-d7d5-4844-bd1b-3c00fb67bbc6> .
+
+<urn:webprotege:ontology:3edd7acc-d7d5-4844-bd1b-3c00fb67bbc6> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R74F9Q9Ssaeqq47MDJ6Cu9Y
+<http://webprotege.stanford.edu/R74F9Q9Ssaeqq47MDJ6Cu9Y> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "hasFields" .
+
+
+###  http://webprotege.stanford.edu/R8GGnIwNLVe8lFfcsIAESi9
+<http://webprotege.stanford.edu/R8GGnIwNLVe8lFfcsIAESi9> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "resultsin" .
+
+
+###  http://webprotege.stanford.edu/R8wpUB3FsTrhIfN5OqZHLcC
+<http://webprotege.stanford.edu/R8wpUB3FsTrhIfN5OqZHLcC> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "leadsTo" .
+
+
+###  http://webprotege.stanford.edu/RBw0Bd0X2Z0UKaQ6MIPDmjt
+<http://webprotege.stanford.edu/RBw0Bd0X2Z0UKaQ6MIPDmjt> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "isAffectedBy" .
+
+
+###  http://webprotege.stanford.edu/RCin6KOST5SJZt5iabBDqtp
+<http://webprotege.stanford.edu/RCin6KOST5SJZt5iabBDqtp> rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "relatedTo" .
+
+
+###  http://webprotege.stanford.edu/RDsXaxEaPUSlbbB7ek1QiEB
+<http://webprotege.stanford.edu/RDsXaxEaPUSlbbB7ek1QiEB> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "isEngagedIn" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R8hfNuyesevPCmSuxc39FkD
+<http://webprotege.stanford.edu/R8hfNuyesevPCmSuxc39FkD> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:label "prefers" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R8MDz7ymTlqY0I487Kjr22i
+<http://webprotege.stanford.edu/R8MDz7ymTlqY0I487Kjr22i> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R74F9Q9Ssaeqq47MDJ6Cu9Y> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RDx8Rituo6zOFbBQ3rYhm2B>
+                                                                         ] ;
+                                                         rdfs:label "Field" .
+
+
+###  http://webprotege.stanford.edu/R9D3RGFLC8CtPDgGedrj5yh
+<http://webprotege.stanford.edu/R9D3RGFLC8CtPDgGedrj5yh> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R8wpUB3FsTrhIfN5OqZHLcC> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RDx8Rituo6zOFbBQ3rYhm2B>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RBw0Bd0X2Z0UKaQ6MIPDmjt> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RBFnmHbqbTgiQh6cOPd1ntv>
+                                                                         ] ;
+                                                         rdfs:label "Choosing" .
+
+
+###  http://webprotege.stanford.edu/RBFnmHbqbTgiQh6cOPd1ntv
+<http://webprotege.stanford.edu/RBFnmHbqbTgiQh6cOPd1ntv> rdf:type owl:Class ;
+                                                         rdfs:label "Beliefs" .
+
+
+###  http://webprotege.stanford.edu/RDx8Rituo6zOFbBQ3rYhm2B
+<http://webprotege.stanford.edu/RDx8Rituo6zOFbBQ3rYhm2B> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R8wpUB3FsTrhIfN5OqZHLcC> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R9D3RGFLC8CtPDgGedrj5yh>
+                                                                         ] ;
+                                                         rdfs:label "Technology" .
+
+
+###  http://webprotege.stanford.edu/RKDbDhNjyKsNssjeutUlUK
+<http://webprotege.stanford.edu/RKDbDhNjyKsNssjeutUlUK> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/RDsXaxEaPUSlbbB7ek1QiEB> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/R8MDz7ymTlqY0I487Kjr22i>
+                                                                        ] ;
+                                                        rdfs:label "Person" .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi

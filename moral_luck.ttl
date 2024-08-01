@@ -1,0 +1,118 @@
+@prefix : <urn:webprotege:ontology:331005d4-7957-4d55-916d-5d171157a196#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:331005d4-7957-4d55-916d-5d171157a196> .
+
+<urn:webprotege:ontology:331005d4-7957-4d55-916d-5d171157a196> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R0mGpZLGG8OZeDcMtP4j9j
+<http://webprotege.stanford.edu/R0mGpZLGG8OZeDcMtP4j9j> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "relatedEvent" .
+
+
+###  http://webprotege.stanford.edu/R7WOUB4FfYuExhKr0Ynb8Fc
+<http://webprotege.stanford.edu/R7WOUB4FfYuExhKr0Ynb8Fc> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "influencesRecognition" .
+
+
+###  http://webprotege.stanford.edu/R96LvYDr1d3hOic6vFMmaVC
+<http://webprotege.stanford.edu/R96LvYDr1d3hOic6vFMmaVC> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "isEngagedIn" .
+
+
+###  http://webprotege.stanford.edu/RC0TFC5qMHu9CRR6DLiRWN6
+<http://webprotege.stanford.edu/RC0TFC5qMHu9CRR6DLiRWN6> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "influencedBy" .
+
+
+###  http://webprotege.stanford.edu/RCKLAOFkGgntxlUvoOshoDh
+<http://webprotege.stanford.edu/RCKLAOFkGgntxlUvoOshoDh> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "hasOutcome" .
+
+
+###  http://webprotege.stanford.edu/RCWE1d0BTMGS8GJnuKfsUoc
+<http://webprotege.stanford.edu/RCWE1d0BTMGS8GJnuKfsUoc> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "inField" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R3HbHDYuJTDj9aBAW0xrSR
+<http://webprotege.stanford.edu/R3HbHDYuJTDj9aBAW0xrSR> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/R96LvYDr1d3hOic6vFMmaVC> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/RC2sNYYt3n0Qk7ESzUvzTEv>
+                                                                        ] ;
+                                                        rdfs:label "Person" .
+
+
+###  http://webprotege.stanford.edu/R9XMK9gtWfbZQ8XJl9e6j9K
+<http://webprotege.stanford.edu/R9XMK9gtWfbZQ8XJl9e6j9K> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RC0TFC5qMHu9CRR6DLiRWN6> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RDKrAOzP2SKmh77m4Zl5lEH>
+                                                                         ] ;
+                                                         rdfs:label "UnforseenCircomstances (Promt)" .
+
+
+###  http://webprotege.stanford.edu/RC2sNYYt3n0Qk7ESzUvzTEv
+<http://webprotege.stanford.edu/RC2sNYYt3n0Qk7ESzUvzTEv> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RCKLAOFkGgntxlUvoOshoDh> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RCKE1Sy3k0XHIcjnWb7isIw>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RCWE1d0BTMGS8GJnuKfsUoc> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RFulQVMntIotsv528aGfnk>
+                                                                         ] ;
+                                                         rdfs:label "Event" .
+
+
+###  http://webprotege.stanford.edu/RCKE1Sy3k0XHIcjnWb7isIw
+<http://webprotege.stanford.edu/RCKE1Sy3k0XHIcjnWb7isIw> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RC0TFC5qMHu9CRR6DLiRWN6> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R9XMK9gtWfbZQ8XJl9e6j9K>
+                                                                         ] ;
+                                                         rdfs:label "SuccessOrFailure" .
+
+
+###  http://webprotege.stanford.edu/RDKrAOzP2SKmh77m4Zl5lEH
+<http://webprotege.stanford.edu/RDKrAOzP2SKmh77m4Zl5lEH> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R7WOUB4FfYuExhKr0Ynb8Fc> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RrDYf8ewwjfFBgqhjj497e>
+                                                                         ] ;
+                                                         rdfs:label "Incident" .
+
+
+###  http://webprotege.stanford.edu/RFulQVMntIotsv528aGfnk
+<http://webprotege.stanford.edu/RFulQVMntIotsv528aGfnk> rdf:type owl:Class ;
+                                                        rdfs:label "Fields" .
+
+
+###  http://webprotege.stanford.edu/RrDYf8ewwjfFBgqhjj497e
+<http://webprotege.stanford.edu/RrDYf8ewwjfFBgqhjj497e> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://webprotege.stanford.edu/R7WOUB4FfYuExhKr0Ynb8Fc> ;
+                                                                          owl:someValuesFrom <http://webprotege.stanford.edu/RCKE1Sy3k0XHIcjnWb7isIw>
+                                                                        ] ;
+                                                        rdfs:label "MoralJudgement" .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
