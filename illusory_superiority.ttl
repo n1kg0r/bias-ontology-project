@@ -1,0 +1,139 @@
+@prefix : <urn:webprotege:ontology:b52f6cf4-b09a-4bf6-9aa3-28721e253846#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:b52f6cf4-b09a-4bf6-9aa3-28721e253846> .
+
+<urn:webprotege:ontology:b52f6cf4-b09a-4bf6-9aa3-28721e253846> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R9OVimITbGslhFNdNlVq4b5
+<http://webprotege.stanford.edu/R9OVimITbGslhFNdNlVq4b5> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:label "expected" .
+
+
+###  http://webprotege.stanford.edu/RzWdmgiWuV6jft8c1gPU2c
+<http://webprotege.stanford.edu/RzWdmgiWuV6jft8c1gPU2c> rdf:type owl:AnnotationProperty ;
+                                                        rdfs:label "observed" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R7OKl3kGnqJvbEkz5SL7DaT
+<http://webprotege.stanford.edu/R7OKl3kGnqJvbEkz5SL7DaT> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RCLutI4KDRbdHp09HiEhypY> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R8WLOkPIIGOcMxEs5fgrXyq> ;
+                                                         rdfs:label "hasAbility" .
+
+
+###  http://webprotege.stanford.edu/RBVglVw2Dtjn4VPMMfy1mTo
+<http://webprotege.stanford.edu/RBVglVw2Dtjn4VPMMfy1mTo> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RCLutI4KDRbdHp09HiEhypY> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/RCB200aDB5Vd3NKcEAG9bZt> ;
+                                                         rdfs:label "isEngagedIn" .
+
+
+###  http://webprotege.stanford.edu/RC9SffR0RGQOUfyMZ9mfScY
+<http://webprotege.stanford.edu/RC9SffR0RGQOUfyMZ9mfScY> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:label "observeed" .
+
+
+###  http://webprotege.stanford.edu/RCCaCGbWIXyKSrqy5RIx0Z
+<http://webprotege.stanford.edu/RCCaCGbWIXyKSrqy5RIx0Z> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R7y8bgheHbvMSofukPF2VUy> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/R86u2nboQRvpp1ZAo5ATNWH> ;
+                                                        rdfs:label "resultsIn" .
+
+
+###  http://webprotege.stanford.edu/RT6GOgstMcwvmKOZQKDQY7
+<http://webprotege.stanford.edu/RT6GOgstMcwvmKOZQKDQY7> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/RCLutI4KDRbdHp09HiEhypY> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/RB1WxKN4GJQJCoAb3is0qc7> ;
+                                                        rdfs:label "hasBelief" .
+
+
+###  http://webprotege.stanford.edu/RYD5t53uQAUHoo4a4f9toL
+<http://webprotege.stanford.edu/RYD5t53uQAUHoo4a4f9toL> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "expected" .
+
+
+###  http://webprotege.stanford.edu/RuSv4GpZNLBEylEu1QMrU9
+<http://webprotege.stanford.edu/RuSv4GpZNLBEylEu1QMrU9> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/RCB200aDB5Vd3NKcEAG9bZt> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/R7y8bgheHbvMSofukPF2VUy> ;
+                                                        rdfs:label "inActivity" .
+
+
+###  http://webprotege.stanford.edu/Rzmrt9vJH2NUJvnMmBvNuB
+<http://webprotege.stanford.edu/Rzmrt9vJH2NUJvnMmBvNuB> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R86u2nboQRvpp1ZAo5ATNWH> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/R5qtD2iZ1ExYcNDXldAx2Y> ;
+                                                        rdfs:label "leadsTo" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://webprotege.stanford.edu/RGY6DvxE1PHxUhMZQ794mL
+<http://webprotege.stanford.edu/RGY6DvxE1PHxUhMZQ794mL> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/R5qtD2iZ1ExYcNDXldAx2Y> ;
+                                                        <http://webprotege.stanford.edu/R9OVimITbGslhFNdNlVq4b5> "Literal"^^xsd:string ;
+                                                        <http://webprotege.stanford.edu/RzWdmgiWuV6jft8c1gPU2c> "Literal"^^xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R5qtD2iZ1ExYcNDXldAx2Y
+<http://webprotege.stanford.edu/R5qtD2iZ1ExYcNDXldAx2Y> rdf:type owl:Class ;
+                                                        rdfs:label "Resulting Behavior" .
+
+
+###  http://webprotege.stanford.edu/R7y8bgheHbvMSofukPF2VUy
+<http://webprotege.stanford.edu/R7y8bgheHbvMSofukPF2VUy> rdf:type owl:Class ;
+                                                         rdfs:label "Activity" .
+
+
+###  http://webprotege.stanford.edu/R86u2nboQRvpp1ZAo5ATNWH
+<http://webprotege.stanford.edu/R86u2nboQRvpp1ZAo5ATNWH> rdf:type owl:Class ;
+                                                         rdfs:label "External Feedback" .
+
+
+###  http://webprotege.stanford.edu/R8WLOkPIIGOcMxEs5fgrXyq
+<http://webprotege.stanford.edu/R8WLOkPIIGOcMxEs5fgrXyq> rdf:type owl:Class ;
+                                                         rdfs:label "Ability" .
+
+
+###  http://webprotege.stanford.edu/RB1WxKN4GJQJCoAb3is0qc7
+<http://webprotege.stanford.edu/RB1WxKN4GJQJCoAb3is0qc7> rdf:type owl:Class ;
+                                                         rdfs:label "Belief"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RCB200aDB5Vd3NKcEAG9bZt
+<http://webprotege.stanford.edu/RCB200aDB5Vd3NKcEAG9bZt> rdf:type owl:Class ;
+                                                         rdfs:label "Engagement" .
+
+
+###  http://webprotege.stanford.edu/RCLutI4KDRbdHp09HiEhypY
+<http://webprotege.stanford.edu/RCLutI4KDRbdHp09HiEhypY> rdf:type owl:Class ;
+                                                         rdfs:label "Person" .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
